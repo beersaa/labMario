@@ -1,0 +1,104 @@
+body{
+	background-image: url(../images/background.jpg);
+	height: 100%;	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0;
+	color: #000000;
+}
+
+@font-face {  
+	font-family: BubbleFont;
+    src: url(../font/SuperMario256.ttf) format("truetype");
+}
+
+#canvas1, #canvas3, #canvas2{
+	position: absolute;
+	top:0;
+	left:0;
+	
+}
+/*maze*/
+#canvas1{
+	z-index: 1;
+}
+/*odzadje*/
+#canvas2{
+	background-color: #954b0c;
+	z-index: 0;
+	
+}
+/*mario*/
+#canvas3{
+	z-index: 2;
+}
+
+#canvaswrap{
+	margin: 0;
+	position: absolute;
+	top: 11%;
+	left: 32%;
+	transform: translate(-50%, -50%);
+	opacity: 0.90;
+}
+
+#down{
+	position: absolute;
+	left:48.5%;
+	top: 88.5%;
+	
+}
+
+#mario{	
+	position: absolute;
+	left: 51%;
+	top: 87%;
+	opacity: 0;
+}
+
+#title{
+	position: absolute;
+	font-family: BubbleFont;
+	font-size: 100px;
+	color: #000000;
+	left: 20%;
+	top: 0;
+}
+
+#uiwrap{
+	width: 50px;
+	font-size: 45px;
+	position: absolute;
+	left: 28%;
+	top: 12%;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+	background: #ead8ba; 
+}
+ 
+/* handle */
+::-webkit-scrollbar-thumb {
+	background: #9e5127; 
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #803b16; 
+}
+
+#replay:hover{
+	transition: 0.2s;
+	color: #Eee3cd;
+}
+
+
+
