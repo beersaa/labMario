@@ -2,8 +2,8 @@ var y=0;
 var x=153;
 var dx=2;
 var dy=2;
-var img = new Image();
 
+var img = new Image();
 img.src='images/sprites/spritedown.png';
 var x1=x;
 var y1=y;
