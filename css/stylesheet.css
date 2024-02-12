@@ -14,6 +14,13 @@ body{
     src: url(../font/SuperMario256.ttf) format("truetype");
 }
 
+.collect-box{
+	height: 50px;
+	width: 50px;
+	margin-left: 50vh;
+	margin-top: 70vh;	
+}
+
 #canvas1, #canvas3, #canvas2{
 	position: absolute;
 	top:0;
@@ -26,7 +33,7 @@ body{
 }
 /*odzadje*/
 #canvas2{
-	background-color: rgb(156, 62, 0);
+	background-image: url(../images/backgroundMaze.png);
 	z-index: 0;
 	
 }
@@ -41,7 +48,6 @@ body{
 	top: 11%;
 	left: 32%;
 	transform: translate(-50%, -50%);
-	opacity: 0.90;
 }
 
 #down{
@@ -53,8 +59,8 @@ body{
 
 #mario{	
 	position: absolute;
-	left: 51%;
-	top: 83%;
+	left: 50%;
+	top: 85%;
 	opacity: 0;
 }
 
@@ -135,6 +141,8 @@ body{
 	transition: 0.2s;
 	color: #Eee3cd;
 }
-
+@media (max-width: 1280px) and (max-height: 1024px) {
+	
+}
 
 

@@ -26,7 +26,7 @@ function labirint() {
 
 	ctx.closePath();
 	ctx.lineWidth = 2;
-	ctx.strokeStyle = "#00000";
+	ctx.strokeStyle = "#Eee3cd";
 	ctx.stroke();
 }
 
