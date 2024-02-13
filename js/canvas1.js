@@ -18,6 +18,9 @@ var tab=[0];
 var num=0;
 var st=0;
 
+var coinNum = 0;
+
+var collectBox = document.getElementById('collect-box');
 
 var collect = new Audio();
 collect.src ='../music/coin.mp3';
@@ -47,7 +50,11 @@ function drawIt() {
 		
 		if(coin>(tab[num]-6) && coin<(tab[num]+10)){
 			collect.play();
-			console.log("audio played!")
+			coinNum++;
+			console.log("audio played")
+			collectBox.className="collect-box";
+			document.getElementById("coin-count").innerHTML = coinNum/8;
+			document.body.appendChild(collectBox);
 			if(coin==(tab[num]+2))
 				num++;
 		}

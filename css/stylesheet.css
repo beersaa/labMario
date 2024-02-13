@@ -17,10 +17,25 @@ body{
 .collect-box{
 	height: 50px;
 	width: 50px;
-	margin-left: 50vh;
-	margin-top: 70vh;	
+	margin-left: 30vh;
+	position: relative;
+	animation-name: collect-box;
+  	animation-duration: 1s;
 }
 
+.coin-count{
+	height: 30px;
+	width: 30px;
+	position: relative;
+	margin-left: 32vh;
+	margin-top: 70vh;
+}
+
+@keyframes collect-box{
+	0%{top:0px;}
+	50%{top:-50px}
+	100%{top:0px}
+}
 #canvas1, #canvas3, #canvas2{
 	position: absolute;
 	top:0;
