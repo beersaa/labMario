@@ -49,12 +49,15 @@ function drawIt() {
 		ctx1.drawImage(img, x-7, y-7, 12, 12);
 		
 		if(coin>(tab[num]-6) && coin<(tab[num]+10)){
+
 			collect.play();
 			coinNum++;
 			console.log("audio played")
+
 			collectBox.className="collect-box";
-			document.getElementById("coin-count").innerHTML = coinNum/8;
+			document.getElementById("coin-count").innerHTML = Math.round(coinNum/8);
 			document.body.appendChild(collectBox);
+
 			if(coin==(tab[num]+2))
 				num++;
 		}
@@ -90,6 +93,7 @@ function drawIt() {
 					document.getElementById("mario").style.transition = "opacity 2s"; 
 					document.getElementById("mario").style.opacity = "1";
 					ctx1.clearRect(100,200,1000,1000);
+					fireworkFinish();
 				}
 			}
 	}		
@@ -111,3 +115,37 @@ replay.addEventListener('click', function() {
 	location.reload();
 });
 
+function fireworkFinish()	{
+	const duration = 15 * 1000,
+	animationEnd = Date.now() + duration,
+	defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0,colors:["#FBD000"], };
+
+	function randomInRange(min, max) {
+	return Math.random() * (max - min) + min;
+	}
+
+	const interval = setInterval(function() {
+	const timeLeft = animationEnd - Date.now();
+
+	if (timeLeft <= 0) {
+		return clearInterval(interval);
+	}
+
+	const particleCount = 50 * (timeLeft / duration);
+
+	confetti(
+		Object.assign({}, defaults, {
+		particleCount,
+		origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+		})
+		
+	);
+	confetti(
+		Object.assign({}, defaults, {
+		particleCount,
+		origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+		})
+
+	);
+	}, 250);
+}

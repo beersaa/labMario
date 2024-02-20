@@ -7,6 +7,7 @@ body{
 	background-attachment: fixed;
 	margin: 0;
 	color: #000000;
+	font-family: BubbleFont;
 }
 
 @font-face {  
@@ -27,8 +28,10 @@ body{
 	height: 30px;
 	width: 30px;
 	position: relative;
-	margin-left: 32vh;
+	margin-left: 31.5vh;
 	margin-top: 70vh;
+	font-size: 3vh;
+	color: #000000;
 }
 
 @keyframes collect-box{
@@ -74,8 +77,8 @@ body{
 
 #mario{	
 	position: absolute;
-	left: 50%;
-	top: 85%;
+	left: 100vh;
+	top: 87vh;
 	opacity: 0;
 }
 
