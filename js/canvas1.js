@@ -10,6 +10,8 @@ var y1=y;
 var n=1;
 let a=0;
 
+var sprite = 0;
+
 var coinS = new Image();
 coinS.src='images/coin.png';
 var collectable=Math.floor(Math.random()*40+20);
@@ -98,15 +100,65 @@ function drawIt() {
 			}
 	}		
 	
-	if(y1<y)
-		img.src='images/sprites/spritedown.png'
-	else if(y1>y)
-		img.src='images/sprites/spriteup.png';
-	else if(x1<x)
-		img.src='images/sprites/spriteright.png';
-	else
-		img.src='images/sprites/spriteleft.png';
-	
+	if(y1<y){	//down
+		if(sprite==0){
+			img.src = 'images/sprites/spritedown1.png';
+			sprite++;
+		}	
+		else if(sprite==1){
+			img.src = 'images/sprites/spritedown2.png';
+			sprite++;
+		}	
+		else{
+			img.src = 'images/sprites/spritedown3.png';
+			sprite = 0;
+		}	
+	}
+	else if(y1>y){ //up
+		if(sprite==0){
+			img.src = 'images/sprites/spriteup1.png';
+			sprite++;
+		}	
+		else if(sprite==1){
+			img.src = 'images/sprites/spriteup2.png';
+			sprite++;
+		}	
+		else{
+			img.src = 'images/sprites/spriteup3.png';
+			sprite = 0;
+		}
+	}
+		
+	else if(x1<x){ //right
+		if(sprite==0){
+			img.src = 'images/sprites/spriteright1.png';
+			sprite++;
+		}	
+		else if(sprite==1){
+			img.src = 'images/sprites/spriteright2.png';
+			sprite++;
+		}	
+		else{
+			img.src = 'images/sprites/spriteright3.png';
+			sprite = 0;
+		}
+	}
+		
+	else{	//left
+		if(sprite==0){
+			img.src = 'images/sprites/spriteleft1.png';
+			sprite++;
+		}	
+		else if(sprite==1){
+			img.src = 'images/sprites/spriteleft2.png';
+			sprite++;
+		}	
+		else{
+			img.src = 'images/sprites/spriteleft3.png';
+			sprite = 0;
+		}
+	}
+
 }
 setInterval(drawIt, 25);
 
