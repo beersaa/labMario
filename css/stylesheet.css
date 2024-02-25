@@ -1,6 +1,6 @@
-body{
+body {
 	background-image: url(../images/background.jpg);
-	height: 100%;	
+	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -10,21 +10,22 @@ body{
 	font-family: BubbleFont;
 }
 
-@font-face {  
+/*font link spreminjas format in path NETIKAJ*/
+@font-face {
 	font-family: BubbleFont;
-    src: url(../font/SuperMario256.ttf) format("truetype");
+	src: url(../font/SuperMario256.ttf) format("truetype");
 }
 
-.collect-box{
+.collect-box {
 	height: 50px;
 	width: 50px;
 	margin-left: 30vh;
 	position: relative;
 	animation-name: collect-box;
-  	animation-duration: 1s;
+	animation-duration: 1s;
 }
 
-.coin-count{
+.coin-count {
 	height: 30px;
 	width: 30px;
 	position: relative;
@@ -34,33 +35,49 @@ body{
 	color: #000000;
 }
 
-@keyframes collect-box{
-	0%{top:0px;}
-	50%{top:-50px}
-	100%{top:0px}
+@keyframes collect-box {
+	0% {
+		top: 0px;
+	}
+
+	50% {
+		top: -50px
+	}
+
+	100% {
+		top: 0px
+	}
 }
-#canvas1, #canvas3, #canvas2{
+
+#canvas1,
+#canvas3,
+#canvas2 {
 	position: absolute;
-	top:0;
-	left:0;
-	
+	top: 0;
+	left: 0;
+
 }
+
 /*maze*/
-#canvas1{
+
+#canvas1 {
 	z-index: 1;
 }
+
 /*odzadje*/
-#canvas2{
+
+#canvas2 {
 	background-image: url(../images/backgroundMaze.png);
 	z-index: 0;
-	
+
 }
+
 /*mario*/
-#canvas3{
+#canvas3 {
 	z-index: 2;
 }
 
-#canvaswrap{
+#canvaswrap {
 	margin: 0;
 	position: absolute;
 	top: 11%;
@@ -68,21 +85,21 @@ body{
 	transform: translate(-50%, -50%);
 }
 
-#down{
+#down {
 	position: absolute;
-	left:48.5%;
+	left: 48.5%;
 	top: 88.5%;
-	
+
 }
 
-#mario{	
+#mario {
 	position: absolute;
 	left: 100vh;
 	top: 87vh;
 	opacity: 0;
 }
 
-#title{
+#title {
 	position: absolute;
 	font-family: BubbleFont;
 	font-size: 100px;
@@ -92,42 +109,45 @@ body{
 	text-shadow: 8px 8px #000000;
 }
 
-.colorB{
+/*ni vazn*/
+.colorB {
 	color: #000000;
 	margin-bottom: 0px;
 	margin-top: 0px;
 	margin-left: 2vh;
 }
 
-.colorBL{
+.colorBL {
 	color: #049CD8;
 	margin-bottom: 0px;
 	margin-top: 0px;
 	margin-left: 2vh;
 }
 
-.colorY{
+.colorY {
 	color: #FBD000;
 	margin-bottom: 0px;
 	margin-top: 0px;
 	margin-left: 2vh;
 }
 
-.colorR{
+.colorR {
 	color: #E52521;
 	margin-bottom: 0px;
 	margin-top: 0px;
 	margin-left: 2vh;
 }
 
-.colorG{
+.colorG {
 	color: #43B047;
 	margin-bottom: 0px;
 	margin-top: 0px;
 	margin-left: 2vh;
 }
 
-#uiwrap{
+/*ni vazn*/
+
+#uiwrap {
 	width: 50px;
 	font-size: 45px;
 	position: absolute;
@@ -142,25 +162,22 @@ body{
 
 /* track */
 ::-webkit-scrollbar-track {
-	background: #ead8ba; 
+	background: #ead8ba;
 }
- 
+
 /* handle */
 ::-webkit-scrollbar-thumb {
-	background: #9e5127; 
+	background: #9e5127;
 }
 
 /* handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #803b16; 
+	background: #803b16;
 }
 
-#replay:hover{
+#replay:hover {
 	transition: 0.2s;
 	color: #Eee3cd;
 }
-@media (max-width: 1280px) and (max-height: 1024px) {
-	
-}
 
-
+@media (max-width: 1280px) and (max-height: 1024px) {}
