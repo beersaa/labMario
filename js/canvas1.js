@@ -197,7 +197,6 @@ function fireworkFinish() {
 				particleCount,
 				origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
 			})
-
 		);
 	}, 250);
 }
