@@ -20,22 +20,39 @@ body {
 	height: 50px;
 	width: 50px;
 	margin-left: 30vh;
-	position: relative;
+	margin-top: 70vh;
+	position: absolute;
 	animation-name: collect-box;
 	animation-duration: 1s;
+	z-index: 0;
 }
 
 .coin-count {
 	height: 30px;
 	width: 30px;
-	position: relative;
+	position: absolute;
 	margin-left: 31.5vh;
-	margin-top: 70vh;
+	margin-top: 71vh;
 	font-size: 3vh;
 	color: #000000;
+	animation-name: coin-count;
+	animation-duration: 1s;
+	z-index: 1;
 }
-
 @keyframes collect-box {
+	0% {
+		top: 0px;
+	}
+
+	50% {
+		top: -50px
+	}
+
+	100% {
+		top: 0px
+	}
+}
+@keyframes coin-count {
 	0% {
 		top: 0px;
 	}
