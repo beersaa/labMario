@@ -34,7 +34,7 @@ body {
 	margin-left: 31.5vh;
 	margin-top: 71vh;
 	font-size: 3vh;
-	color: #000000;
+	color: #f8f8f8;
 	animation-name: coin-count;
 	animation-duration: 1s;
 	z-index: 1;

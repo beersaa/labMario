@@ -23,6 +23,7 @@ var st = 0;
 var coinNum = 0;
 
 var collectBox = document.getElementById('collect-box');
+var coinCount = document.getElementById('coin-count');
 
 var collect = new Audio();
 collect.src = '../music/coin.mp3';
@@ -59,6 +60,9 @@ function drawIt() {
 			collectBox.className = "collect-box";
 			document.getElementById("coin-count").innerHTML = Math.round(coinNum / 8);
 			document.body.appendChild(collectBox);
+
+			coin.className = "coin-count";
+			document.body.appendChild(coinCount);
 
 			if (coin == (tab[num] + 2))
 				num++;
