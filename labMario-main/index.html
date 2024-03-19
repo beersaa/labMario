@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mario!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="icon" href="images/favicon.ico" type="image/ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</head>
+<body>	
+	<div id="title" > <p class="colorBL">S</p> <p class="colorY">U</p> <p class="colorR">P</p> <p class="colorG">E</p> <p class="colorY" style="margin-right: 3vh;">R </p> <p class="colorR">M</p> <p class="colorG">A</p> <p class="colorY">R</p> <p class="colorBL">I</p> <p class="colorG">O</p></div>
+	<div class="">
+		<div class="coin-count" id="coin-count">0</div>
+		<img src="images/collect.webp" id="collect-box" class="collect-box">
+	</div>
+	
+	<div id="canvaswrap">		
+		<canvas id="canvas1" width="710px" height="710px" ></canvas>
+		<canvas id="canvas2" width="708px" height="708px"></canvas>
+		<canvas id="canvas3" width="710px" height="710px"></canvas>		
+	</div>	
+	<div id="down"> <!--neki ekperimentiral ne dela ku bi moral -->
+		<!--<img id="mp" src="images/mushroom.webp" width="100">-->
+	</div>
+		<div id="mario">
+		<img src="images/mario.png" width="40">
+		</div>	
+	<div id="uiwrap">
+		<div id="replay" class="replay">
+			<i class="fa fa-fw fa-undo"></i>
+		</div>
+	</div>
+	<div class="tunel">
+		
+	</div>
+	
+	<script src="js/canvas1.js"></script>
+	<script src="js/canvas2.js"></script>
+</body>
+</html>
